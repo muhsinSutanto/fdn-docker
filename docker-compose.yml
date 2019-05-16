@@ -11,5 +11,3 @@ services:
       - 3000:4000
     depends_on:
       - redis-server
-    volumes:
-      - .:/usr/src/app
