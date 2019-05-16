@@ -1,0 +1,15 @@
+version: '3'
+services:
+  redis-server:
+    image: redis:alpine
+    ports:
+      - 6379:6379
+  
+  node-app:
+    build: .
+    ports:
+      - 3000:4000
+    depends_on:
+      - redis-server
+    volumes:
+      - .:/usr/src/app
