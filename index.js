@@ -16,8 +16,8 @@ app.get("/", (req, res) => {
             console.log("Error: ", err)
         }
 
-        res.status(200).send("Number of visits: ", + visitCount)
-        redisClient.set("visists", parseInt(visitCount) + 1)
+        res.status(200).send("Number of visits: " + visitCount)
+        redisClient.set("visits", parseInt(visitCount) + 1)
     })
 })
 
